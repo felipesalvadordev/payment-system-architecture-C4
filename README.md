@@ -40,4 +40,10 @@ As informações poderão ser armazenadas em SQL Server ou MongoDB (NoSQL), ambo
 estão disponíveis nos dois data centers, porém, sem replicação automática de dados  
 
 A aplicação web e todos os serviços devem ter backend stateless, e o frontend deve seguir 
-o modelo de arquitetura SPA.
+o modelo de arquitetura SPA.  
+
+Referências:  
+https://dev.to/simonbrown/diagramming-distributed-architectures-with-the-c4-model-51cm?signin=true  
+https://www.youtube.com/watch?v=tx1O55Aq1CA  
+https://mariocarrion.com/2020/12/30/documenting-software-architecture-c4-model.html  
+https://www.eximia.co/insights/quanto-de-esforco-se-deve-dedicar-a-arquitetura-de-software-apenas-o-suficiente/
