@@ -1,4 +1,6 @@
-# Desenho da arquitetura do enunciado abaixo:
+# Desenho da arquitetura do enunciado abaixo:  
+
+Desafio passado no bootcamp de arquitetura do IGTI: https://www.igti.com.br/bootcamp/arquiteto-software  
 
 Sistema de gestão de riscos que será utilizado para avaliar todas as transações realizadas (pagamentos por cartão, Pix, pagamentos via sistemas de parceiros etc.) e, de acordo 
 com vários critérios para cada tipo de transação, o sistema deverá definir um score de risco para a transação.  
