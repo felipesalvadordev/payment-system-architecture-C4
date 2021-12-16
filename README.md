@@ -44,8 +44,9 @@ estão disponíveis nos dois data centers, porém, sem replicação automática 
 A aplicação web e todos os serviços devem ter backend stateless, e o frontend deve seguir 
 o modelo de arquitetura SPA.  
 
+# Contexto de Pagamentos
+![alt text](https://github.com/Fsalvador91/arquitetura-pagamentos-C4/blob/main/Contexto%20Pagamentos.drawio.png?raw=true)  
 # Componente Gateway  
-
 ![alt text](https://github.com/Fsalvador91/arquitetura-pagamentos-C4/blob/main/Container%20Gateway%20Pagamentos.drawio.png?raw=true)
 
 Referências:  
