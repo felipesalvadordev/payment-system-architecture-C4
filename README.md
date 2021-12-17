@@ -14,26 +14,27 @@ como redundância para o data center onpremise. Entretanto, as funcionalidades d
 Data rodam exclusivamente na nuvem. Além disso, as redes da nuvem e onpremise 
 funcionam como uma única rede de todos os serviços.  
 
-1 ESB1 disponível no data center onpremise.
-2 ESB2 disponível no data center da nuvem com as configurações replicadas do 
+1. ESB1 disponível no data center onpremise.
+2. ESB2 disponível no data center da nuvem com as configurações replicadas do 
 ESB1.
-3 Serviços de monitoramento do ambiente com controle de downtimes e SLA.
-4 Serviços de gerenciamento de capacity planning.
-5 Gateway de pagamentos (centralizador de todas as demandas de pagamento 
+3. Serviços de monitoramento do ambiente com controle de downtimes e SLA.
+4. Serviços de gerenciamento de capacity planning.
+5. Gateway de pagamentos (centralizador de todas as demandas de pagamento 
 solicitadas pelos clientes).
-6 Serviços de negócio para atender às diferentes demandas de clientes.
-7 Serviços para rotinas de administração do ambiente, como execução de backup e 
-expurgo de dados.
+6. Serviços de negócio para atender às diferentes demandas de clientes.
+7. Serviços para rotinas de administração do ambiente, como execução de backup e 
+expurgo de dados.  
+
 Sabe que o sistema será composto pelos seguintes componentes:  
 
-1 Módulo web, de uso interno, com as funcionalidades de administração do sistema. 
+1. Módulo web, de uso interno, com as funcionalidades de administração do sistema. 
 Ele permitirá gerenciar o cadastro dos operadores (funcionários da empresa), 
 configurar clientes, definir políticas de riscos para cada meio de pagamento e 
 emissão de relatórios e consultas.
-2 Serviço central de avaliação do score de riscos das transações (será consumido pelo 
+2. Serviço central de avaliação do score de riscos das transações (será consumido pelo 
 gateway de pagamentos).
-3 Rotinas de integração com as plataformas de BI e Big Data.
-4 Conjunto de serviços que outros times da empresa poderão consumir para consultar 
+3. Rotinas de integração com as plataformas de BI e Big Data.
+4. Conjunto de serviços que outros times da empresa poderão consumir para consultar 
 score de transações, abrir reclamações etc.
 Por ser um sistema crítico (após a implantação, nenhuma transação poderá ser aprovada 
 sem o score computado), o sistema deverá ser executado no data center primário e, em 
