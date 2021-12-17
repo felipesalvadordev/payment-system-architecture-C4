@@ -48,6 +48,8 @@ o modelo de arquitetura SPA.
 
 # Contexto de Pagamentos
 ![alt text](https://github.com/Fsalvador91/arquitetura-pagamentos-C4/blob/main/Contexto%20Pagamentos.drawio.png?raw=true)  
+# Container Pagamentos
+![alt text](https://github.com/Fsalvador91/arquitetura-pagamentos-C4/blob/main/Container%20Pagamentos.drawio.png?raw=true)  
 # Componente Gateway  
 ![alt text](https://github.com/Fsalvador91/arquitetura-pagamentos-C4/blob/main/Container%20Gateway%20Pagamentos.drawio.png?raw=true)
 
