@@ -24,7 +24,8 @@ solicitadas pelos clientes).
 6. Serviços de negócio para atender às diferentes demandas de clientes.
 7. Serviços para rotinas de administração do ambiente, como execução de backup e 
 expurgo de dados.
-Sabe que o sistema será composto pelos seguintes componentes:
+Sabe que o sistema será composto pelos seguintes componentes:  
+
 1. Módulo web, de uso interno, com as funcionalidades de administração do sistema. 
 Ele permitirá gerenciar o cadastro dos operadores (funcionários da empresa), 
 configurar clientes, definir políticas de riscos para cada meio de pagamento e 
