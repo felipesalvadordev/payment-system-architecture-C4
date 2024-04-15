@@ -1,58 +1,33 @@
-# Desenho da arquitetura do enunciado abaixo:  
+# Payment System Design using the C4 model
 
-Desafio passado no bootcamp de arquitetura do IGTI: https://www.igti.com.br/bootcamp/arquiteto-software  
+IGTI architecture bootcamp challenge: https://www.igti.com.br/bootcamp/arquiteto-software  
 
-Sistema de gestão de riscos que será utilizado para avaliar todas as transações realizadas (pagamentos por cartão, Pix, pagamentos via sistemas de parceiros etc.) e, de acordo 
-com vários critérios para cada tipo de transação, o sistema deverá definir um score de risco para a transação.  
+Risk management system that will be used to evaluate all transactions carried out (payments by card, Pix, payments via partner systems, etc.) and, according to various criteria for each type of transaction, the system must define a risk score for the transaction.
 
-A empresa utiliza um ambiente de computação em nuvem híbrido, formado por um data 
-center onpremise, em São Paulo, onde rodam os principais sistemas da empresa e um data 
-center em nuvem, contrato de um cloud provider de mercado. Os dois data centers são 
-interligados por links redundantes de baixa latência, além de largura de banda suficiente 
-para os próximos 5 anos de crescimento da empresa. O data center em nuvem é utilizado 
-como redundância para o data center onpremise. Entretanto, as funcionalidades de BI e Big 
-Data rodam exclusivamente na nuvem. Além disso, as redes da nuvem e onpremise 
-funcionam como uma única rede de todos os serviços.  
+The company uses a hybrid cloud computing environment, formed by an on-premise data center, in São Paulo, where the company's main systems run, and a cloud data center, contracted with a market cloud provider. The two data centers are interconnected by redundant low-latency links, as well as sufficient bandwidth for the company's next 5 years of growth. The cloud data center is used as redundancy for the on-premise data center. However, BI and Big Data functionalities run exclusively in the cloud. Furthermore, cloud and on-premise networks work as a single network for all services.
 
-1. ESB1 disponível no data center onpremise.
-2. ESB2 disponível no data center da nuvem com as configurações replicadas do 
-ESB1.
-3. Serviços de monitoramento do ambiente com controle de downtimes e SLA.
-4. Serviços de gerenciamento de capacity planning.
-5. Gateway de pagamentos (centralizador de todas as demandas de pagamento 
-solicitadas pelos clientes).
-6. Serviços de negócio para atender às diferentes demandas de clientes.
-7. Serviços para rotinas de administração do ambiente, como execução de backup e 
-expurgo de dados.  
+ESB1 available in the onpremise data center.
+ESB2 available in the cloud data center with configurations replicated from ESB1.
+Environment monitoring services with downtime control and SLA.
+Capacity planning management services.
+Payment gateway (centralizing all payment demands requested by customers).
+Business services to meet different customer demands.
+Services for environment administration routines, such as performing backups and data purging.
+You know that the system will consist of the following components:
 
-Sabe que o sistema será composto pelos seguintes componentes:  
+Web module, for internal use, with system administration functionalities. It will allow you to manage the registration of operators (company employees), configure clients, define risk policies for each payment method and issue reports and queries.
+Central transaction risk score assessment service (will be consumed by the payment gateway).
+Integration routines with BI and Big Data platforms.
+Set of services that other teams in the company can consume to consult transaction scores, open complaints, etc. As it is a critical system (after implementation, no transaction can be approved without the computed score), the system must be run in the primary data center and, in the event of failures, its replica will need to be activated with the least possible downtime. For the first few months, a transaction volume of 15K requests/sec is expected. Information can be stored in SQL Server or MongoDB (NoSQL), both are available in both data centers, however, without automatic data replication
+The web application and all services must have a stateless backend, and the frontend must follow the SPA architecture model.
 
-1. Módulo web, de uso interno, com as funcionalidades de administração do sistema. 
-Ele permitirá gerenciar o cadastro dos operadores (funcionários da empresa), 
-configurar clientes, definir políticas de riscos para cada meio de pagamento e 
-emissão de relatórios e consultas.
-2. Serviço central de avaliação do score de riscos das transações (será consumido pelo 
-gateway de pagamentos).
-3. Rotinas de integração com as plataformas de BI e Big Data.
-4. Conjunto de serviços que outros times da empresa poderão consumir para consultar 
-score de transações, abrir reclamações etc.
-Por ser um sistema crítico (após a implantação, nenhuma transação poderá ser aprovada 
-sem o score computado), o sistema deverá ser executado no data center primário e, em 
-caso de falhas, sua réplica precisará ser acionada com o menor downtime possível.
-Espera-se, para os primeiros meses, um volume de transações de 15K requests/sec. 
-As informações poderão ser armazenadas em SQL Server ou MongoDB (NoSQL), ambos 
-estão disponíveis nos dois data centers, porém, sem replicação automática de dados  
-
-A aplicação web e todos os serviços devem ter backend stateless, e o frontend deve seguir 
-o modelo de arquitetura SPA.  
-
-# Contexto de Pagamentos
+# Payment Context
 ![alt text](https://github.com/Fsalvador91/arquitetura-pagamentos-C4/blob/main/Contexto%20Pagamentos.drawio.png?raw=true)  
-# Container Pagamentos
+# Payment Container
 ![alt text](https://github.com/Fsalvador91/arquitetura-pagamentos-C4/blob/main/Container%20Pagamentos.drawio.png?raw=true)  
-# Componente Gateway  
+# Gateway Component
 ![alt text](https://github.com/Fsalvador91/arquitetura-pagamentos-C4/blob/main/Container%20Gateway%20Pagamentos.drawio.png?raw=true)
-# Container Administrativo
+# Admin Container
 ![alt text](https://github.com/Fsalvador91/arquitetura-pagamentos-C4/blob/main/Container_Administrador.drawio.png?raw=true)  
 
 Referências:  
