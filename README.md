@@ -1,6 +1,6 @@
 # Payment System Design using the C4 model
 
-IGTI architecture bootcamp challenge: https://www.igti.com.br/bootcamp/arquiteto-software  
+XP education architecture bootcamp challenge: https://www.xpeducacao.com.br/bootcamp-pass/arquitetura
 
 Risk management system that will be used to evaluate all transactions carried out (payments by card, Pix, payments via partner systems, etc.) and, according to various criteria for each type of transaction, the system must define a risk score for the transaction.
 
