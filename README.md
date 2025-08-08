@@ -6,8 +6,6 @@ Risk management system that will be used to evaluate all transactions carried ou
 
 The company uses a hybrid cloud computing environment, formed by an on-premise data center, in São Paulo, where the company's main systems run, and a cloud data center, contracted with a market cloud provider. The two data centers are interconnected by redundant low-latency links, as well as sufficient bandwidth for the company's next 5 years of growth. The cloud data center is used as redundancy for the on-premise data center. However, BI and Big Data functionalities run exclusively in the cloud. Furthermore, cloud and on-premise networks work as a single network for all services.
 
-ESB1 available in the onpremise data center.
-ESB2 available in the cloud data center with configurations replicated from ESB1.
 Environment monitoring services with downtime control and SLA.
 Capacity planning management services.
 Payment gateway (centralizing all payment demands requested by customers).
